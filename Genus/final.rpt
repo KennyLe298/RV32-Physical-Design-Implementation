@@ -1,0 +1,51 @@
+
+
+Working Directory = /data/cc04group1/2352346/work/synthesis_env/RISCV32/workspace
+QoS Summary for DatapathPipelined
+==========================================================================================
+Metric                          generic         map             syn_opt         final          
+==========================================================================================
+Slack (ps):                     4,547             332               2               2
+  R2R (ps):                     4,547             332               2               2
+  I2R (ps):                     6,476           4,846           4,674           4,674
+  R2O (ps):                     6,221           4,863           4,814           4,814
+  I2O (ps):                  no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value        no_value
+TNS (ps):                           0               0               0               0
+  R2R (ps):                         0               0               0               0
+  I2R (ps):                         0               0               0               0
+  R2O (ps):                         0               0               0               0
+  I2O (ps):                  no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value        no_value
+Failing Paths:                      0               0               0               0
+Cell Area:                    173,497          63,424          61,960          61,960
+Total Cell Area:              173,497          63,424          61,960          61,960
+Leaf Instances:                56,217          23,091          22,397          22,397
+Total Instances:               56,217          23,091          22,397          22,397
+Utilization (%):                 0.00            0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value        no_value
+==========================================================================================
+CPU  Runtime (h:m:s):        00:05:51        00:07:39        00:00:56        00:00:01
+Real Runtime (h:m:s):        00:05:32        00:05:02        00:00:58        00:00:04
+CPU  Elapsed (h:m:s):        00:06:01        00:13:39        00:14:35        00:14:36
+Real Elapsed (h:m:s):        00:05:37        00:10:37        00:11:35        00:11:40
+Memory (MB):                  2048.97         2035.92         2031.74         2031.74
+==========================================================================================
+==========================================================================================
+Flow Settings:
+==========================================================================================
+Total Runtime (h:m:s): 00:11:40
+Total Memory (MB):     2031.74
+Executable Version:    22.17-s071_1
+==========================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+
