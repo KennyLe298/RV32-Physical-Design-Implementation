@@ -1,16 +1,19 @@
 set STAGE 00_init_design
 
-source lefs.tcl
+exec mkdir -p rpt SAVED
 
-set init_verilog DataPipelined.v
+set init_verilog    "../RTL/DatapathPipelined_m.v"
+
 set init_design_uniquify 1
 set init_design_settop 1
-set init_top_cell RV32
-set init_lef_file $init_lef_files
+set init_top_cell   "DatapathPipelined"
+
+set init_lef_file   "../LEF/gsclib045_tech.lef ../LEF/gsclib045_macro.lef"
 set init_pwr_net {VDD}
 set init_gnd_net {VSS}
 
+set init_mmmc_file  "./mmmc.tcl"
+
 init_design
 
-saveDesign SAVED/${STAGE}_init.invs
-
+saveDesign -mmmc2 SAVED/${STAGE}_init.invs
