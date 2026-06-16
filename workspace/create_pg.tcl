@@ -1,4 +1,3 @@
-
 editDelete -type Special -use POWER
 
 
@@ -44,7 +43,7 @@ sroute -connect { blockPin padPin padRing corePin floatingStripe } \
     -layerChangeRange { M1 M10 } \
     -blockPinTarget { nearestTarget } \
     -corePinTarget { firstAfterRowEnd } \
-    -floatingStripeTarget { blocking ring stripe ringpin blockpin followpin } \
+    -floatingStripeTarget { blockring ring stripe padring ringpin blockpin followpin } \
     -allowJogging 1 \
     -allowLayerChange 1 \
     -crossoverViaBottomLayer M1 \

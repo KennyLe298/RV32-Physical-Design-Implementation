@@ -6,8 +6,8 @@ source ccopt_native.spec
 # M2 keeps local leaf-level clock routing low and out of the way of signal nets; M6 gives the
 # trunk a mid-stack layer that sits below the M9/M10 power ring/mesh
 # built in create_pg.tcl, avoiding overlap with the power network.
-setCTSMode -bottomPreferredLayer M2
-setCTSMode -routeTopPreferredLayer M6
+setCTSMode -obs_routeBottomPreferredLayer M2
+setCTSMode -obs_routeTopPreferredLayer M6
 
 set_ccopt_property target_max_trans 0.8
 set_ccopt_property -max_fanout 32
