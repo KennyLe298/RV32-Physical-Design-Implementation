@@ -1,0 +1,92 @@
+**WARN: (IMPREPO-207):	There are 3 Cells dimensions not multiple integer of site.
+**Info: (IMPSP-307): Design contains fractional 3 cells.
+Begin checking placement ... (start mem=3101.7M, init mem=3101.7M)
+*info: Recommended don't use cell = 0           
+*info: Placed = 21038         
+*info: Unplaced = 0           
+Placement Density:58.64%(60574/103285)
+Placement Density (including fixed std cells):58.64%(60574/103285)
+Finished checkPlace (total: cpu=0:00:00.4, real=0:00:00.0; vio checks: cpu=0:00:00.3, real=0:00:00.0; mem=3101.7M)
+Design: DatapathPipelined
+
+------ Design Summary:
+Total Standard Cell Number   (cells) : 21038
+Total Block Cell Number      (cells) : 0
+Total I/O Pad Cell Number    (cells) : 0
+Total Standard Cell Area     ( um^2) : 60574.36
+Total Block Cell Area        ( um^2) : 0.00
+Total I/O Pad Cell Area      ( um^2) : 0.00
+
+------ Design Statistics:
+
+Number of Instances            : 21038
+Number of Non-uniquified Insts : 21031
+Number of Nets                 : 25872
+Average number of Pins per Net : 3.14
+Maximum number of Pins in Net  : 76
+
+------ I/O Port summary
+
+Number of Primary I/O Ports    : 231
+Number of Input Ports          : 66
+Number of Output Ports         : 165
+Number of Bidirectional Ports  : 0
+Number of Power/Ground Ports   : 2
+Number of Floating Ports                     *: 0
+Number of Ports Connected to Multiple Pads   *: 0
+Number of Ports Connected to Core Instances   : 231
+**WARN: (IMPREPO-202):	There are 231 Ports connected to core instances.
+
+------ Design Rule Checking:
+
+Number of Output Pins connect to Power/Ground *: 0
+Number of Insts with Input Pins tied together ?: 13
+Number of TieHi/Lo term nets not connected to instance's PG terms ?: 0
+Number of Input/InOut Floating Pins            : 0
+Number of Output Floating Pins                 : 0
+Number of Output Term Marked TieHi/Lo         *: 0
+
+**WARN: (IMPREPO-216):	There are 13 Instances with input pins tied together.
+Number of nets with tri-state drivers          : 0
+Number of nets with parallel drivers           : 0
+Number of nets with multiple drivers           : 0
+Number of nets with no driver (No FanIn)       : 0
+Number of Output Floating nets (No FanOut)     : 1491
+Number of High Fanout nets (>50)               : 47
+**WARN: (IMPREPO-227):	There are 47 High Fanout nets (>50).
+**WARN: (IMPREPO-213):	There are 231 I/O Pins connected to Non-IO Insts.
+Checking for any assigns in the netlist...
+  No assigns found.
+Checking routing tracks.....
+Checking other grids.....
+Checking FINFET Grid is on Manufacture Grid.....
+
+Checking core/die box is on Grid.....
+
+Checking snap rule ......
+
+Checking Row is on grid......
+
+INFO (IMPFP-7241): Tech site CoreSite has no symmetry Y. 	Current symmetry setting : isSymmetryR90 false; isSymmetryX : false; isSymmetryY : false;
+
+Checking AreaIO row.....
+Checking routing blockage.....
+Checking components.....
+Checking constraints (guide/region/fence).....
+Checking groups.....
+Checking Ptn Core Box.....
+
+Checking Preroutes.....
+No. of regular pre-routes not on tracks : 0 
+ Design check done.
+Report saved in file checkDesign/DatapathPipelined.main.htm.ascii
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPREPO-227          1  There are %d High Fanout nets (>50).     
+WARNING   IMPREPO-202          1  There are %d Ports connected to core ins...
+WARNING   IMPREPO-207          1  There are %d Cells dimensions not multip...
+WARNING   IMPREPO-213          1  There are %d I/O Pins connected to Non-I...
+WARNING   IMPREPO-216          1  There are %d Instances with input pins t...
+*** Message Summary: 5 warning(s), 0 error(s)
+

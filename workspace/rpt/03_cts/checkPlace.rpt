@@ -1,0 +1,7 @@
+**Info: (IMPSP-307): Design contains fractional 3 cells.
+Begin checking placement ... (start mem=2973.8M, init mem=2973.8M)
+*info: Placed = 21043         
+*info: Unplaced = 0           
+Placement Density:58.65%(60577/103285)
+Placement Density (including fixed std cells):58.65%(60577/103285)
+Finished checkPlace (total: cpu=0:00:00.4, real=0:00:00.0; vio checks: cpu=0:00:00.3, real=0:00:00.0; mem=2973.8M)

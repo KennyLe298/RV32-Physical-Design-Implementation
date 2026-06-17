@@ -1,0 +1,4 @@
+    Hinst Name       Module Name              Inst Count           Total Area
+--------------------------------------------------------------------------
+DatapathPipelined                                  21038            60574.356
+  div_u              DividerUnsignedPipelined       8342            23545.674
