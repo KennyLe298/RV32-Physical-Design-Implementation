@@ -11,10 +11,7 @@ floorPlan -r $aspect_ratio $core_util $core2io $core2io $core2io $core2io
 # (no macros in DatapathPipelined - nothing to place here)
 
 #! Assign I/O pins
-# Done here, right after the floorplan exists and before placement,
-# so place_opt_design (in 02_Placement.tcl) optimizes cell positions
-# against real pin locations instead of guessing. M3 keeps pins below
-# the CTS trunk layer (M6) and well below the M9/M10 power mesh.
+
 editPin -pin {clk rst inst_from_imem[*]} -side Left -layer M3 -spreadType SIDE -fixedPin
 editPin -pin {load_data_from_dmem[*]} -side Bottom -layer M3 -spreadType SIDE -fixedPin
 editPin -pin {pc_to_imem[*] addr_to_dmem[*]} -side Right -layer M3 -spreadType SIDE -fixedPin

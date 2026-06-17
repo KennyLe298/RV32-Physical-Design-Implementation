@@ -16,4 +16,11 @@ set init_mmmc_file  "./mmmc.tcl"
 
 init_design
 
+setDesignMode -process 45
+
+
+setDontUse NAND2X4 true
+setDontUse NAND2X6 true
+setDontUse NAND2X8 true
+
 saveDesign -mmmc2 SAVED/${STAGE}_init.invs

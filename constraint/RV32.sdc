@@ -4,17 +4,15 @@
 # Baseline run: 100 MHz (10 ns period)
 #=====================================================================
 
-# ---------------------------------------------------------
-# Set the current design
-# ---------------------------------------------------------
 current_design DatapathPipelined
 
 
-set_driving_cell -lib_cell BUFX2 -pin Y [all_inputs]
+# Drive all DATA inputs with a real cell
+set_driving_cell -lib_cell BUFX2 -pin Y [remove_from_collection [all_inputs] [get_ports clk]]
 set_load 0.02 [all_outputs]
 
 
-create_clock -name "clk" -add -period 10.0 -waveform {0.0 5.0} [get_ports clk]
+create_clock -name "clk" -period 10.0 -waveform {0.0 5.0} [get_ports clk]
 
 
 set_clock_uncertainty 0.1 [all_clocks]

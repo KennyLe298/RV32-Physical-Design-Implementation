@@ -16,7 +16,7 @@ setAddStripeMode -reset
 setAddStripeMode -stacked_via_top_layer M4 -stacked_via_bottom_layer M1 \
     -stapling_nets_style side_to_side
 addStripe -nets {VDD VSS} -layer M4 -direction vertical \
-    -width 0.4 -spacing 2 -set_to_set_distance 30 -start_offset 5
+    -width 0.4 -spacing 2 -set_to_set_distance 60 -start_offset 5
 
 puts "Stripe mesh tier 1 (M4) added."
 
@@ -39,15 +39,13 @@ addStripe -nets {VDD VSS} -layer M10 -direction vertical \
 setAddStripeMode -reset
 puts "Stripe mesh tier 3 (M10, merged with ring) added."
 
-sroute -connect { blockPin padPin padRing corePin floatingStripe } \
+sroute -connect { corePin floatingStripe } \
     -layerChangeRange { M1 M10 } \
-    -blockPinTarget { nearestTarget } \
     -corePinTarget { firstAfterRowEnd } \
-    -floatingStripeTarget { blockring ring stripe padring ringpin blockpin followpin } \
+    -floatingStripeTarget { ring stripe followpin } \
     -allowJogging 1 \
     -allowLayerChange 1 \
-    -crossoverViaBottomLayer M1 \
-    -crossoverViaTopLayer M10 \
+    -crossoverViaLayerRange { M1 M10 } \
     -targetViaLayerRange { M1 M10 } \
     -nets { VDD VSS }
 
@@ -56,5 +54,5 @@ puts "sroute (pin-to-rail connection) complete."
 editPowerVia -nets {VDD VSS} -add_vias true -top_layer M10 -bottom_layer M1
 
 
-saveDesign post_power_plan -mmmc2
+saveDesign -mmmc2 SAVED/post_power_plan.invs
 puts "Checkpoint 'post_power_plan' saved."
